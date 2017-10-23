@@ -1,0 +1,22 @@
+$c-menu__a___color: #ccc;
+$c-menu__a--active___background-color: #000;
+$c-menu__a--active___color: #eee;
+
+.c-menu {
+  border-bottom: solid #000 4px;
+  background-color: #444;
+  color: $c-menu__a___color;
+  padding: 0;
+
+  &__item {
+    padding: .5em 1em;
+    margin: 0;
+    display: inline-block;
+    color: $c-menu__a___color;
+
+    &--active {
+      background-color: $c-menu__a--active___background-color;
+      color: $c-menu__a--active___color;
+    }
+  }
+}
