@@ -1,0 +1,49 @@
+
+.c-users {
+  border: solid #000 4px;
+
+  &__empty,
+  &__user {
+    background-color: #444;
+    color: #eee;
+    padding: .5em 1em;
+  }
+
+  &__empty {
+    font-style: italic;
+    text-align: center;
+  }
+}
+
+.c-user {
+  display: flex;
+  border-bottom: solid #000 1px;
+
+  &:last-child {
+    border: 0;
+  }
+
+  &__field {
+    flex-grow: 1;
+    padding: .5em 1em;
+    border-right: 1px solid #888;
+    width: 100%;
+
+    &:last-child {
+      border: 0;
+    }
+
+    &--first-name {
+      width: 25%;
+    }
+    &--last-name {
+      width: 25%;
+    }
+    &--address {
+      width: 25%;
+    }
+    &--actions {
+      width: 25%;
+    }
+  }
+}

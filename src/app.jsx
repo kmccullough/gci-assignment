@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { HashRouter, Route } from 'react-router-dom';
+import { HashRouter, Switch, Route } from 'react-router-dom';
+
+import dispatcher from './dispatcher';
 
 import Menu from './components/menu';
 import Index from './components/index';
-import Main from './components/main';
+import Users from './components/users';
 import Help from './components/help';
 
 ReactDOM.render(
@@ -15,9 +17,12 @@ ReactDOM.render(
 
             <Menu />
 
-            <Route exact path="/" component={Index}/>
-            <Route path="/main" component={Main}/>
-            <Route path="/help" component={Help}/>
+            <Switch>
+                <Route exact path="/" component={Index}/>
+                <Route path="/users" component={Users}/>
+                <Route path="/help" component={Help}/>
+                <Route component={Index}/>
+            </Switch>
 
         </div>
     </HashRouter>,
